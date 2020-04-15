@@ -9,7 +9,11 @@ class App < Sinatra::Base
   post '/' do
     text_from_user = params[:user_text]
     @analyzed_text = TextAnalyzer.new(text_from_user)
-    @numberofwords = text_from_user.split(" ").size
+    
+      def count_of_words
+          @numberofwords = text_from_user.split(" ").size
+      end
+    
     vowels = ["a", "i", "o", "u", "e"]
     nonvowels =  text_from_user.split(" ").join.split("") - vowels
     @vowels = text_from_user.split(" ").join.split("") - nonvowels
