@@ -20,7 +20,7 @@ class App < Sinatra::Base
      
        @numrepeat = hashy.values.max
        
-       @commonletter =  hashy.select {|k,v| k if @numrepeat == v} 
+       @commonletter =  hashy.select {|k,v| k.key if @numrepeat == v} 
            
     erb :results
   end
