@@ -19,8 +19,9 @@ class App < Sinatra::Base
        nonvowels =  text_from_user.split(" ").join.split("") - vowels
         @vowels = text_from_user.split(" ").join.split("") - nonvowels
      end
-     
+  def count_of_consonants
     @constants = nonvowels
+  end
     sameletter = []
     
      hashy = text_from_user.split(" ").join.split("").each_with_object(Hash.new(0)) { |e,h| h[e] +=1 }
