@@ -23,7 +23,8 @@ class App < Sinatra::Base
          @constants = nonvowels
      end
    
-    
+    def most_used_letter
+      
      hashy = text_from_user.split(" ").join.split("").each_with_object(Hash.new(0)) { |e,h| h[e] +=1 }
      
        @numrepeat = hashy.values.max
@@ -31,5 +32,6 @@ class App < Sinatra::Base
        @commonletter =  hashy.select {|k,v| k if @numrepeat == v}.keys[0] 
            
     erb :results
+   end
   end
 end
