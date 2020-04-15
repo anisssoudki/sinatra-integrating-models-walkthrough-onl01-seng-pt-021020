@@ -8,7 +8,7 @@ class App < Sinatra::Base
 
   post '/' do
     text_from_user = params[:user_text]
-    
+    @text = text_from_user
     @numberofwords = text_from_user.split(" ").size
     vowels = ["a", "i", "o", "u", "e"]
     nonvowels =  text_from_user.split(" ").join.split("") - vowels
@@ -18,7 +18,7 @@ class App < Sinatra::Base
     
      @commonletter = 
      def difference(other)
-     text_from_user.split(" ").join.split("").sort.each_with_object(Hash.new(0)) { |e,h| h[e] +=1 }
+     @text.split(" ").join.split("").sort.each_with_object(Hash.new(0)) { |e,h| h[e] +=1 }
         end
           difference(text_from_user)
     erb :results
