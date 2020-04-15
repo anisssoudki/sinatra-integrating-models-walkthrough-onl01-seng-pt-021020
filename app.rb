@@ -20,7 +20,7 @@ class App < Sinatra::Base
      
        @numrepeat = hashy.values.max
        
-       @commonletter =  hashy.keys.count
+       @commonletter =  hashy.
            
     erb :results
   end
