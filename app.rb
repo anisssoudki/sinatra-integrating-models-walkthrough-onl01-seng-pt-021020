@@ -19,6 +19,13 @@ class App < Sinatra::Base
      hashy = text_from_user.split(" ").join.split("").each_with_object(Hash.new(0)) { |e,h| h[e] +=1 }
      
        @numrepeat = hashy.values.max
+       
+       @commonletter =  hashy.values.each do 
+         |k,v| 
+         if v == @numrepeat 
+           return k 
+         end
+       end
     erb :results
   end
 end
