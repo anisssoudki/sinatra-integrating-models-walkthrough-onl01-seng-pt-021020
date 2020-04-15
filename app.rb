@@ -19,7 +19,7 @@ class App < Sinatra::Base
      @commonletter = text_from_user.split(" ").join.split("").collect do |letter|
          
            letter.sort
-        i += 1
+     
         end
           
     erb :results
