@@ -16,9 +16,9 @@ class App < Sinatra::Base
     @constants = nonvowels
     sameletter = []
     
-     @commonletter = text_from_user.split(" ").join.split("").collect do |letter|
+     @commonletter = text_from_user.split(" ").join.split("").sort.collect do |letter|
          
-           letter.sort
+           letter.
      
         end
           
