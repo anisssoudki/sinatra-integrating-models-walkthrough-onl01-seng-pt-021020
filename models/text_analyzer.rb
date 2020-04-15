@@ -6,7 +6,7 @@ class TextAnalyzer
     @text = text.downcase
   end
       def count_of_words
-          @numberofwords = text_from_user.split(" ").size
+          @numberofwords = @text.split(" ").size
       end
       
     def count_of_vowels
