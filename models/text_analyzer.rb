@@ -11,11 +11,11 @@ class TextAnalyzer
       
     def count_of_vowels
        vowels = ["a", "i", "o", "u", "e"]
-       nonvowels =  @text.split(" ").join.split("") - vowels
-        @vowels = @text.split(" ").join.split("") - nonvowels
+       @nonvowels =  @text.split(" ").join.split("") - vowels
+        @vowels = @text.split(" ").join.split("") - @nonvowels
      end
      def count_of_consonants
-         @constants = nonvowels
+         @constants = @nonvowels
      end
    
     def most_used_letter
