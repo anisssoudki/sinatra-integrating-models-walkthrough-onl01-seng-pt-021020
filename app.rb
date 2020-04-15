@@ -22,7 +22,7 @@ class App < Sinatra::Base
        
        @commonletter =  hashy.values.each do 
          |k,v| if v == @numrepeat 
-           return k 
+           
          end
        end
     erb :results
