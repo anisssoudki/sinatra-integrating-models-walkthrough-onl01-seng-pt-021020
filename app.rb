@@ -20,7 +20,7 @@ class App < Sinatra::Base
      def difference(other)
      other.split(" ").join.split("").sort.each_with_object(Hash.new(0)) { |e,h| h[e] +=1 }
         end
-          difference(@text)
+          difference(text_from_user)
     erb :results
   end
 end
