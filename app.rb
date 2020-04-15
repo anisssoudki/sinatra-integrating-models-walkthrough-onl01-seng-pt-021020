@@ -21,7 +21,7 @@ class App < Sinatra::Base
        @numrepeat = hashy.values.max
        
        @commonletter =  hashy.values.each do 
-         |k| if v == @numrepeat 
+         |k,v| return k if v == @numrepeat 
            
          end
        end
