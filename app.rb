@@ -17,7 +17,7 @@ class App < Sinatra::Base
     sameletter = []
     
      @commonletter = text_from_user.split(" ").join.split("").each_with_object(Hash.new(0)) { |e,h| h[e] +=1 }
-  
+   @commonletter.value
     erb :results
   end
 end
