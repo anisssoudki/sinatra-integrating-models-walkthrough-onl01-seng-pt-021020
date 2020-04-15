@@ -16,7 +16,7 @@ class App < Sinatra::Base
     @constants = nonvowels
     sameletter = []
     
-     @commonletter = text_from_user.join.split("").each_with_object(Hash.new(0)) { |e,h| h[e] +=1 }
+     @commonletter = text_from_user.split(" ").join.split("").each_with_object(Hash.new(0)) { |e,h| h[e] +=1 }
   
     erb :results
   end
