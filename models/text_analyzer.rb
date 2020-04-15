@@ -15,7 +15,7 @@ class TextAnalyzer
         @vowels = @text.split(" ").join.split("") - @nonvowels.count
      end
      def count_of_consonants
-         @constants = @nonvowels.size
+         @constants = @nonvowels.count
      end
    
     def most_used_letter
