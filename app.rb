@@ -8,7 +8,20 @@ class App < Sinatra::Base
 
   post '/' do
     text_from_user = params[:user_text]
-
+    
+    @numberofwords = text_from_user.split(" ").size
+    vowels = ["a", "i", "o", "u", "e"]
+    nonvowels =  text_from_user.split(" ").join.split("") - vowels
+    @vowels = text_from_user.split(" ").join.split("") - nonvowels
+    @constants = nonvowels
+    sameletter = []
+    i = 0
+     @commonletter = text_from_user.split(" ").join.split("").collect do |letter|
+         
+           letter[0].include?letter[i] 
+        i += 1
+        end
+          
     erb :results
   end
 end
