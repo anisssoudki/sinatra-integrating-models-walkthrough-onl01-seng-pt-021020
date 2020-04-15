@@ -13,10 +13,13 @@ class App < Sinatra::Base
       def count_of_words
           @numberofwords = text_from_user.split(" ").size
       end
-    
-    vowels = ["a", "i", "o", "u", "e"]
-    nonvowels =  text_from_user.split(" ").join.split("") - vowels
-    @vowels = text_from_user.split(" ").join.split("") - nonvowels
+      
+    def count_of_vowels
+       vowels = ["a", "i", "o", "u", "e"]
+       nonvowels =  text_from_user.split(" ").join.split("") - vowels
+        @vowels = text_from_user.split(" ").join.split("") - nonvowels
+     end
+     
     @constants = nonvowels
     sameletter = []
     
