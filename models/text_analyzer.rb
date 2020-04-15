@@ -28,7 +28,7 @@ class TextAnalyzer
       end
         def most_used_letter
           most_used_letter_times
-       @commonletter =  @hashy.select {|k,v| k if @numrepeat == v}.keys[0] 
+         @commonletter =  @hashy.select {|k,v| k if @numrepeat == v}.keys[0]
            @commonletter
    
    end
