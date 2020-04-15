@@ -18,7 +18,7 @@ class App < Sinatra::Base
     
      @commonletter = 
      def difference(other)
-     Array.split(" ").join.split("").sort.each_with_object(Hash.new(0)) { |e,h| h[e] +=1 }
+     other.split(" ").join.split("").sort.each_with_object(Hash.new(0)) { |e,h| h[e] +=1 }
         end
           difference(@text)
     erb :results
