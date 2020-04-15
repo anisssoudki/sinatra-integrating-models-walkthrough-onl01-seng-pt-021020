@@ -22,8 +22,6 @@ class App < Sinatra::Base
        
        @commonletter =  hashy.each { |k,v| k if @numrepeat ==  v }
            
-         
-       end
     erb :results
   end
 end
