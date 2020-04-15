@@ -10,8 +10,8 @@ class TextAnalyzer
       end
       
     def count_of_vowels
-       vowels = ["a", "i", "o", "u", "e"]
-       nonvowels =  text_from_user.split(" ").join.split("") - vowels
+       @vowels = ["a", "i", "o", "u", "e"]
+       @nonvowels =  text_from_user.split(" ").join.split("") - vowels
         @vowels = text_from_user.split(" ").join.split("") - nonvowels
      end
      def count_of_consonants
