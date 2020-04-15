@@ -18,7 +18,7 @@ class App < Sinatra::Base
     
      @commonletter = text_from_user.split(" ").join.split("").sort.collect do |letter|
          
-           letter
+           letter.each_with_object(Hash.new(0)) { |e,h| h[e] +=1 }
      
         end
           
