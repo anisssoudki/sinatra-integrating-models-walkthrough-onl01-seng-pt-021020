@@ -18,7 +18,7 @@ class App < Sinatra::Base
     
      @commonletter = text_from_user.split(" ").join.split("").sort.collect do |letter|
          
-           letter.
+           letter
      
         end
           
