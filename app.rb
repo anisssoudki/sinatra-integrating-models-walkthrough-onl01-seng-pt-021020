@@ -16,9 +16,9 @@ class App < Sinatra::Base
     @constants = nonvowels
     sameletter = []
     
-     @commonletter = text_from_user.split(" ").join.split("").each_with_object(Hash.new(0)) { |e,h| h[e] +=1 }
+     hashy = text_from_user.split(" ").join.split("").each_with_object(Hash.new(0)) { |e,h| h[e] +=1 }
      
-       
+       @numrepeat = hashy.values.max
     erb :results
   end
 end
