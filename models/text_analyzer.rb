@@ -28,7 +28,7 @@ class TextAnalyzer
       end
         def most_used_letter
        @commonletter =  @hashy.select {|k,v| k if @numrepeat == v}.keys[0] 
-           
+           @commonletter
     erb :results
    end
   end
