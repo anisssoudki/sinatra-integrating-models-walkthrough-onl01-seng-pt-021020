@@ -23,8 +23,9 @@ class TextAnalyzer
     def most_used_letter_times
       
     @hashy = @text.split(" ").join.split("").each_with_object(Hash.new(0)) { |e,h| h[e] +=1 }
-   end
+  
        @numrepeat = @hashy.values.max
+      end
         def most_used_letter
        @commonletter =  @hashy.select {|k,v| k if @numrepeat == v}.keys[0] 
            
