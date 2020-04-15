@@ -22,7 +22,7 @@ class TextAnalyzer
    
     def most_used_letter_times
       
-     hashy = @text.split(" ").join.split("").each_with_object(Hash.new(0)) { |e,h| h[e] +=1 }
+    @hashy = @text.split(" ").join.split("").each_with_object(Hash.new(0)) { |e,h| h[e] +=1 }
    end
        @numrepeat = hashy.values.max
         def most_used_letter
